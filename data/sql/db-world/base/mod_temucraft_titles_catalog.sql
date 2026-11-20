@@ -3,7 +3,7 @@
 CREATE TABLE IF NOT EXISTS `mod_temucraft_title_catalog` (
     `id` INT UNSIGNED NOT NULL AUTO_INCREMENT, `retail_id` INT UNSIGNED NOT NULL DEFAULT 0, `title` VARCHAR(255) NOT NULL,
     `achievement` VARCHAR(255) NOT NULL DEFAULT '', `unlock` TEXT, `expansion` VARCHAR(64) NOT NULL DEFAULT '',
-    `faction` VARCHAR(32) NOT NULL DEFAULT '', `source` VARCHAR(64) NOT NULL DEFAULT '', `in_game` INT UNSIGNED NOT NULL DEFAULT 0,
+    `faction` VARCHAR(64) NOT NULL DEFAULT '', `source` VARCHAR(64) NOT NULL DEFAULT '', `in_game` INT UNSIGNED NOT NULL DEFAULT 0,
     PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 DELETE FROM `mod_temucraft_title_catalog`;
 INSERT INTO `mod_temucraft_title_catalog` (`retail_id`, `title`, `achievement`, `unlock`, `expansion`, `faction`, `source`, `in_game`) VALUES

@@ -1,5 +1,5 @@
 -- mod-temucraft-titles: every title from tools/wow_titles.csv, with how it was originally earned; `in_game` is
--- the CharTitles id when the title exists on this server (give it with .temutitle give or .titles add).
+-- the CharTitles id when the title exists on this server (give it with .temucraft temutitle give or .titles add).
 CREATE TABLE IF NOT EXISTS `mod_temucraft_title_catalog` (
     `id` INT UNSIGNED NOT NULL AUTO_INCREMENT, `retail_id` INT UNSIGNED NOT NULL DEFAULT 0, `title` VARCHAR(255) NOT NULL,
     `achievement` VARCHAR(255) NOT NULL DEFAULT '', `unlock` TEXT, `expansion` VARCHAR(64) NOT NULL DEFAULT '',

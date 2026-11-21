@@ -9,8 +9,8 @@ A titles sandbox: titles from every expansion, with no requirements, for game ma
   server know 192 title bits and 155 are taken). To add some: fill `PICKS` in `tools/build_titles.py`, run it, and run
   it with `--client` (game closed) for the client's CharTitles.dbc. `mod_temucraft_titles_dbc.sql` now only removes
   the 37 that were tried before.
-- **Commands** (game masters): `.temutitle find <text>` (green = in game, with its id), `.temutitle give <id or name>`
-  and `.temutitle take <id or name>` on the selected player, `.temutitle reload`. AzerothCore's `.titles add <id>` works
+- **Commands** (game masters): `.temucraft temutitle find <text>` (green = in game, with its id), `.temucraft temutitle give <id or name>`
+  and `.temucraft temutitle take <id or name>` on the selected player, `.temucraft temutitle reload`. AzerothCore's `.titles add <id>` works
   too.
 
 

@@ -8,7 +8,7 @@
 // Titles sandbox: titles from every expansion, with no requirements, for game masters to hand out.
 // - The catalog (mod_temucraft_title_catalog) lists every title and how it was originally earned.
 // - The titles in game (CharTitles ids 190+, chartitles_dbc + the client's CharTitles.dbc) can be given and taken:
-//   .temutitle find <text>, .temutitle give <id or name> (to the selected player), .temutitle take <id or name>.
+//   .temucraft temutitle find <text>, .temucraft temutitle give <id or name> (to the selected player), .temucraft temutitle take <id or name>.
 
 #include "Chat.h"
 #include "CommandScript.h"
@@ -78,7 +78,7 @@ public:
             { "take",   HandleTake,   101403 /* SEC_GAMEMASTER -> RBAC */, Console::No },
             { "reload", HandleReload, 101404 /* SEC_ADMINISTRATOR -> RBAC */, Console::Yes },
         };
-        static ChatCommandTable table = { { "temutitle", sub } };
+        static ChatCommandTable table = { { "temucraft temutitle", sub } };
         return table;
     }
 
@@ -113,7 +113,7 @@ public:
         CharTitlesEntry const* title = Find(text, handler->GetPlayer());
         if (!title)
         {
-            handler->SendSysMessage("That title isn't in game (.temutitle find lists them; green ones can be given).");
+            handler->SendSysMessage("That title isn't in game (.temucraft temutitle find lists them; green ones can be given).");
             return true;
         }
         target->SetTitle(title, !give);
